@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.svg-active path {
+		fill: red;
+	}
+}
+@layer components {
+}
+.button {
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	will-change: box-shadow, transform;
+	background-color: #cad2c5;
+	box-shadow:
+		0px 0.01em 0.01em rgb(132 169 140 / 40%),
+		0px 0.3em 0.7em -0.01em rgb(132 169 140 / 30%),
+		inset 0px -0.01em 0px rgb(132 169 140 / 50%);
+	padding: 0 2em;
+	color: #2f3e46;
+	height: 2.6em;
+	text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+	transition:
+		box-shadow 0.15s ease,
+		transform 0.15s ease;
+}
+
+.button:hover {
+	box-shadow:
+		0px 0.1em 0.2em rgb(45 35 66 / 40%),
+		0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%),
+		inset 0px -0.1em 0px #354f52;
+	transform: translateY(-0.1em);
+}
+
+.button:active {
+	box-shadow: inset 0px 0.1em 0.6em rgb(132 169 140);
+	transform: translateY(0em);
+}
